@@ -8,7 +8,7 @@
 
 body {
   font-family: "Rubik", serif;
-  padding: 15px;
+  padding: 20px;
   background-color: hsl(226, 43%, 10%);
   color: white;
 }
@@ -66,8 +66,9 @@ main {
 }
 
 .main__item img {
-  height: 70px;
-  width: 70px;
+  height: 80px;
+  width: 80px;
+  margin-bottom: 10px;
 }
 
 .main__item .first-div {
@@ -80,6 +81,7 @@ main {
   border-radius: 10px 10px 10px 10px;
   height: 70%;
   background-color: hsl(235, 46%, 20%);
+  padding: 20px;
 }
 
 /* Individual background colors for the main items */
