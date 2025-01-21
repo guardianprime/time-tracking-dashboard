@@ -1,13 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+body {
+  font-family: "Rubik", serif;
+  padding: 15px;
+  background-color: hsl(226, 43%, 10%);
+  color: white;
+}
+
+header {
+  width: 100%;
+  height: 200px;
+  outline: 2px solid black;
+  border-radius: 10px;
+}
+
+header img {
+  width: 80px;
+  height: auto;
+  border-radius: 50%;
+}
+
+.img-wrap {
+  border-radius: 50%;
+  background-color: white;
+  padding: 3px;
+}
+
+.profile-wrap {
+  display: flex;
+  justify-content: space-around;
+  outline: 2px solid red;
+}
+
+.profile-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  outline: 2px solid blue;
+}
+
+nav ul {
+  list-style: none;
+}
+
+main {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 130vh;
+  width: 100%;
+  background-color: transparent;
+}
+
+.main__item {
+  width: 100%;
+  height: 15%;
+  border-radius: 10px;
+}
+
+.main__item img {
+  height: 70px;
+  width: 70px;
+}
+
+.main__item .first-div {
+  height: 30%;
+  overflow: hidden;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.main__item .second-div {
+  border-radius: 10px 10px 10px 10px;
+  height: 70%;
+  background-color: hsl(235, 46%, 20%);
+}
+
+/* Individual background colors for the main items */
+.work {
+  background-color: hsl(15, 100%, 70%);
+}
+
+.play {
+  background-color: hsl(195, 74%, 62%);
+}
+
+.study {
+  background-color: hsl(348, 100%, 68%);
+}
+
+.exercise {
+  background-color: hsl(145, 58%, 55%);
+}
+
+.social {
+  background-color: hsl(264, 64%, 52%);
+}
+
+.selfCare {
+  background-color: hsl(43, 84%, 65%);
+}
+
+/* ---------- */
+
 .attribution {
   font-size: 11px;
   text-align: center;
 }
+
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
