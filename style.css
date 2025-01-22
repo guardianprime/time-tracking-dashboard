@@ -55,6 +55,10 @@ header img {
   height: 70%;
 }
 
+h1 {
+  font-size: 1.3rem;
+}
+
 .nav {
   height: 30%;
   padding: 20px;
