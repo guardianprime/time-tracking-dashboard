@@ -7,6 +7,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     navLinks.forEach((link) => {
         link.addEventListener("click", async (e) => {
+            // Remove "active" class from all list items
+            navLinks.forEach(li => li.classList.remove("active"));
+
+            // Add "active" class to the clicked item
+            e.target.classList.add("active");
+
             const period = e.target.textContent.toLowerCase();
             const dataPromises = Array.from(currentElements).map((_, index) => getData(index));
             const data = await Promise.all(dataPromises);
