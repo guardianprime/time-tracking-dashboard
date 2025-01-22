@@ -66,6 +66,10 @@ header img {
   justify-content: space-between;
 }
 
+.nav ul li:hover {
+  cursor: pointer;
+}
+
 main {
   margin-top: 30px;
   display: flex;
@@ -79,7 +83,11 @@ main {
 .main__item {
   width: 100%;
   height: 15%;
-  border-radius: 10px;
+  border-radius: 12px;
+}
+
+.main__item:hover {
+  cursor: pointer;
 }
 
 .first-div img {
@@ -104,6 +112,10 @@ main {
   padding: 20px;
 }
 
+.second-div:hover {
+  background-color: hsl(235, 46%, 30%);
+}
+
 .sub-div {
   display: flex;
   justify-content: space-between;
@@ -112,6 +124,10 @@ main {
 .sub-div img {
   width: 21px;
   height: 5px;
+}
+
+.sub-div img:hover {
+  cursor: pointer;
 }
 
 .time-div {
