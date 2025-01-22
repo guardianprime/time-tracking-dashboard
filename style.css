@@ -11,6 +11,7 @@ body {
   padding: 20px;
   background-color: hsl(226, 43%, 10%);
   color: white;
+  overflow-x: hidden;
 }
 
 header {
@@ -121,11 +122,12 @@ main {
 }
 
 .current {
-  font-size: 2rem;
+  font-size: clamp(1.2rem, 2rem, 2.1rem);
 }
 
 .previous {
   color: hsl(236, 100%, 87%);
+  font-size: clamp(0.8rem, 1rem, 1.3rem);
 }
 
 /* Individual background colors for the main items */
@@ -155,7 +157,16 @@ main {
 
 /* ---------- */
 
-/* LAPTOP AND DESKTOP STYLES. */
+/* Tablets */
+
+@media screen and (min-width: 700px) {
+  body {
+    padding: 20px;
+    grid-template-rows: 200px 200px;
+  }
+}
+
+/* Bigger than regular phones styles*/
 
 @media screen and (min-width: 450px) {
   body {
@@ -163,7 +174,6 @@ main {
     grid-template-columns: 1fr 3fr;
     grid-template-rows: 250px 250px;
     gap: 20px;
-    padding: 100px 200px;
   }
 
   header {
@@ -173,16 +183,26 @@ main {
 
   .profile-wrap {
     flex-direction: column;
+    align-items: flex-start;
   }
 
-  nav ul {
+  .profile-details {
+    height: 50%;
+  }
+
+  .nav ul {
     flex-direction: column;
+    height: 80%;
+  }
+
+  .userName {
+    font-size: 2.5rem;
   }
 
   main {
     display: grid;
     grid-row: 1 / 3;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 20px;
     margin: 0;
@@ -192,5 +212,24 @@ main {
 
   .main__item {
     height: 100%;
+  }
+}
+
+/* LARGE LAPTOPS AND DESKTOPS */
+@media screen and (min-width: 1000px) {
+  body {
+    padding: 100px 50px;
+  }
+
+  main {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+/* LARGER LAPTOPS  */
+
+@media screen and (min-width: 1200px) {
+  body {
+    padding: 100px 200px;
   }
 }
