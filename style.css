@@ -161,14 +161,36 @@ main {
   body {
     display: grid;
     grid-template-columns: 1fr 3fr;
-    grid-template-rows: 1fr 1fr;
-    padding: 200px;
+    grid-template-rows: 250px 250px;
+    gap: 20px;
+    padding: 100px 200px;
   }
 
+  header {
+    grid-row: 1 / 3;
+    height: 100%;
+  }
+
+  .profile-wrap {
+    flex-direction: column;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
 
   main {
     display: grid;
+    grid-row: 1 / 3;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
+    gap: 20px;
+    margin: 0;
+    height: 100%;
+    padding: 0;
+  }
+
+  .main__item {
+    height: 100%;
   }
 }
