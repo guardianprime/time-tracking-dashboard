@@ -12,8 +12,8 @@ document.addEventListener("DOMContentLoaded", () => {
             e.target.classList.add("active");
 
             const period = e.target.textContent.toLowerCase();
-            const dataPromises = Array.from(currentElements).map((_, index) => getData(index));
-            const data = await Promise.all(dataPromises);
+            const data = await getData();
+            console.log(data);
 
             currentElements.forEach((element, index) => {
                 const cleanInfo = data[index].timeframes[period].current;
@@ -35,12 +35,12 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    async function getData(number) {
+    async function getData() {
         const res = await fetch(`./data.json`);
         if (!res.ok) {
             throw new Error(`Failed to fetch data: ${res.status}`);
         }
         const data = await res.json();
-        return data[number];
+        return data;
     }
 });
