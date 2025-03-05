@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
         throw new Error(`Failed to fetch data: ${res.status}`);
       }
         const data = await res.json();
-        return data.number;
+        return data[number];
     }
 
 
