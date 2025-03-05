@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     async function getData(number) {
-        const res = await fetch(`http://localhost:3000/${number}`);
+        const res = await fetch(`./data.json/${number}`);
         const data = await res.json();
         return data;
     }
