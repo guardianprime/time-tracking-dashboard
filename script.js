@@ -1,10 +1,12 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", async () => {
     const navLinks = document.querySelectorAll(".nav-links");
     const currentElements = document.querySelectorAll(".current");
     const previousElements = document.querySelectorAll(".previous");
+    
+    const data = await getData();
 
     navLinks.forEach((link) => {
-        link.addEventListener("click", async (e) => {
+        link.addEventListener("click", (e) => {
             // Remove "active" class from all list items
             navLinks.forEach(li => li.classList.remove("active"));
 
@@ -12,8 +14,6 @@ document.addEventListener("DOMContentLoaded", () => {
             e.target.classList.add("active");
 
             const period = e.target.textContent.toLowerCase();
-            const data = await getData();
-            console.log(data);
 
             currentElements.forEach((element, index) => {
                 const cleanInfo = data[index].timeframes[period].current;
@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (!res.ok) {
             throw new Error(`Failed to fetch data: ${res.status}`);
         }
-        const data = await res.json();
-        return data;
+        const fullData = await res.json();
+        return fullData;
     }
 });

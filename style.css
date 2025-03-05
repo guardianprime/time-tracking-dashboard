@@ -147,7 +147,7 @@ main {
 
 .previous {
   color: hsl(236, 100%, 87%);
-  font-size: clamp(0.8rem, 1rem, 1.3rem);
+  font-size: clamp(0.8rem, 0.9rem, 1.2rem);
 }
 
 /* UTILITIES */
