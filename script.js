@@ -38,9 +38,12 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     async function getData(number) {
-        const res = await fetch(`./data.json/${number}`);
+        const res = await fetch(`./data.json`);
+        if (!res.ok) {
+        throw new Error(`Failed to fetch data: ${res.status}`);
+      }
         const data = await res.json();
-        return data;
+        return data.number;
     }
 
 
